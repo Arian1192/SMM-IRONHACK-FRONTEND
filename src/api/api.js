@@ -7,10 +7,10 @@ const api = axios.create({
 })
 
 export const loginUser = async (data) => {
-    console.log("Paso por aqui hello")
     const response = await axios.post("/auth/login", data)
     if(response.ok){
-        return response.data
+        console.log(response)
+        return response
     }else{
         throw Error("Login Failed")
     }

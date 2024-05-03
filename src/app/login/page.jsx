@@ -11,10 +11,12 @@ import { useForm } from "react-hook-form";
 
 export function page() {
   const {register, handleSubmit, reset} = useForm()
-  const mutation = useMutation({mutationKey: ['login'], mutationFn: loginUser })
+  const mutation = useMutation({mutationKey: ['login'], mutationFn: loginUser})
   
   const handleLoginSubmit = (formData) => {
-    mutation.mutate(...formData)
+    mutation.mutate(...formData, { onSuccess: ()=>{
+      reset()
+    }})
   }
 
   return (
