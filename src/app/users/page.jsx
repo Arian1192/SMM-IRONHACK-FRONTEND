@@ -13,7 +13,8 @@ import {
 
 export function Page() {
 	const {
-		data: users
+		data: users,
+		isLoading,
 	} = useQuery({
 		queryKey: ['appointments'],
 		queryFn: getAllUsers,
