@@ -5,7 +5,6 @@ import { getAllUsers } from '../../api/api.js';
 import {
 	Table,
 	TableBody,
-	TableCaption,
 	TableCell,
 	TableHead,
 	TableHeader,
